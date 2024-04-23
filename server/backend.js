@@ -33,6 +33,12 @@ app.post('/mul', (req, res) => {
     res.json(result);
 });
 
+app.post('/pow', (req, res) => {
+    const { num1, num2 } = req.body;
+    const result = num1 ** num2;
+    res.json(result);
+});
+
 app.post('/div', (req, res) => {
     const { num1, num2 } = req.body;
     if(num2 === 0){

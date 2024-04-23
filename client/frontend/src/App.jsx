@@ -47,18 +47,8 @@ function App() {
               label="Number 1"
               variant="outlined"
             />
-            <TextField
-              style={{ marginBottom: 10 }}
-              onChange={(e) => {
-                setNum2(e.target.value)
-              }}
-              fullWidth={true}
-              label="Number 2"
-              variant="outlined"
-            />
-            <br />
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Select Operation</InputLabel>
+              <InputLabel id="demo-simple-select-label">Operation</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
@@ -72,10 +62,22 @@ function App() {
                 <MenuItem value="sub">-</MenuItem>
                 <MenuItem value="mul">*</MenuItem>
                 <MenuItem value="div">/</MenuItem>
+                <MenuItem value="pow">^</MenuItem>
               </Select>
             </FormControl>
             <br />
             <br />
+            <TextField
+              style={{ marginBottom: 10 }}
+              onChange={(e) => {
+                setNum2(e.target.value)
+              }}
+              fullWidth={true}
+              label="Number 2"
+              variant="outlined"
+            />
+            <br />
+            
             <Button 
             style = {{
               display: "flex",
