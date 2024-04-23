@@ -48,7 +48,7 @@ function App() {
               variant="outlined"
             />
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Operation</InputLabel>
+              <InputLabel id="demo-simple-select-label">Operator</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
