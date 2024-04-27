@@ -10,6 +10,7 @@ import axios from 'axios';
 import Appbar from './components/Appbar.jsx';
 import Scientific from './components/Scientific.jsx';
 import Simple from './components/Simple.jsx';
+import Landing from './components/Landing.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path = {"/simple"} element={<Simple/>}></Route>
             <Route path = {"/scientific"} element={<Scientific />}></Route>
+            <Route path = {"/"} element = {<Landing/>}></Route>
           </Routes>
       </Router>
     </div>

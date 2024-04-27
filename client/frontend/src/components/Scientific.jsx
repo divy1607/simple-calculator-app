@@ -13,7 +13,6 @@ import { Checkbox } from "@mui/material";
 
 function Scientific() {
     const [num, setNum] = useState('');
-
     const [result, setResult] = useState('');
     const [func, setFunc] = useState(null);
     const [checked, setChecked] = useState(false);
@@ -49,18 +48,18 @@ function Scientific() {
                             setFunc(e.target.value);
                         }}
                     >
+
+                        <MenuItem value="invsine">arcsin(x)</MenuItem>
+                        <MenuItem value="invcosine">arccos(x)</MenuItem>
+                        <MenuItem value="invtan">arctan(x)</MenuItem>
+                        <MenuItem value="natlog">ln(x)</MenuItem>
                         <MenuItem value="sine">sin(x)</MenuItem>
                         <MenuItem value="cosine">cos(x)</MenuItem>
                         <MenuItem value="tan">tan(x)</MenuItem>
                         <MenuItem value="exp">e^x</MenuItem>
                         <MenuItem value="log">log(x)</MenuItem>
-                        <MenuItem value="invsine">arcsin(x)</MenuItem>
-                        <MenuItem value="invcosine">arccos(x)</MenuItem>
-                        <MenuItem value="invtan">arctan(x)</MenuItem>
-                        <MenuItem value="natlog">ln(x)</MenuItem>
                     </Select>
                 </FormControl>
-                
                 <br />
                 <br />
 
@@ -104,15 +103,16 @@ function Scientific() {
                     onChange={(e) => {
                         setChecked(e.target.checked)
                     }}
+                    inputProps={{ 'aria-label': 'controlled' }}
                 />} label="inv" />
             </Card>
         </div>
-        <div style = {{
+        <div style={{
             display: "flex",
             justifyContent: "center",
         }}>
             <Card style={{
-                
+
                 padding: 20,
                 width: 200,
                 marginTop: 50,
@@ -122,7 +122,7 @@ function Scientific() {
                 <div>
                     <TextField
                         style={{ marginBottom: 10 }}
-                        
+
                         label="Result"
                         variant="outlined"
                         value={result}
